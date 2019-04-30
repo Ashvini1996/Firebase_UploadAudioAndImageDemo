@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioRecordingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-rP-aXO">
+                                <rect key="frame" x="140" y="70" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YDE-QS-XVp"/>
+                                    <constraint firstAttribute="width" constant="95" id="ywA-5V-Vp5"/>
+                                </constraints>
+                                <state key="normal" title="Record Audio">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAudioClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EgO-Jg-soC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-s8-gqD">
+                                <rect key="frame" x="140" y="120" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="CPM-vs-pjN"/>
+                                    <constraint firstAttribute="height" constant="30" id="F17-K8-lw0"/>
+                                </constraints>
+                                <state key="normal" title="Play Audio">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudioClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7AF-Rq-5gn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKc-lG-TgY">
+                                <rect key="frame" x="101" y="170" width="173" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="CJp-Xz-rlA"/>
+                                    <constraint firstAttribute="height" constant="30" id="asT-oE-bny"/>
+                                </constraints>
+                                <state key="normal" title="Upload Audio to Firebase">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadAudioToFirebase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xC-lf-gt1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="847-n1-dfV">
+                                <rect key="frame" x="97.5" y="220" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oXc-DE-fT2"/>
+                                    <constraint firstAttribute="width" constant="180" id="qeS-Ys-Upp"/>
+                                </constraints>
+                                <state key="normal" title="Upload Image to Firebase">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadImageToFirebase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hx7-KY-e1M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jKc-lG-TgY" firstAttribute="top" secondItem="tOs-s8-gqD" secondAttribute="bottom" constant="20" id="0Cl-Fb-W5m"/>
+                            <constraint firstItem="tEp-rP-aXO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0F5-Yf-QRT"/>
+                            <constraint firstItem="847-n1-dfV" firstAttribute="top" secondItem="jKc-lG-TgY" secondAttribute="bottom" constant="20" id="0gz-Ur-fkU"/>
+                            <constraint firstItem="tEp-rP-aXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L0O-O3-rYT"/>
+                            <constraint firstItem="847-n1-dfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MxH-qM-Ocw"/>
+                            <constraint firstItem="tOs-s8-gqD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ciS-UE-6XF"/>
+                            <constraint firstItem="tOs-s8-gqD" firstAttribute="top" secondItem="tEp-rP-aXO" secondAttribute="bottom" constant="20" id="nYP-23-0As"/>
+                            <constraint firstItem="jKc-lG-TgY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sU8-hB-sXO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playBtn" destination="tOs-s8-gqD" id="W2B-Vp-gI3"/>
+                        <outlet property="recordBtn" destination="tEp-rP-aXO" id="d8D-tV-6YK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
